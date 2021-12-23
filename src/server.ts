@@ -1,6 +1,6 @@
 import { serve } from "./deps.ts";
 import serveHtml from "./handlers/serveHtml.ts";
-import proxyRequest from "./handlers/proxyRequest.ts";
+import proxy from "./handlers/proxy.ts";
 
 const port = 3003;
 console.log(`Listening on port ${port}`);
@@ -12,6 +12,6 @@ serve((req) => {
     case "/index.html":
       return serveHtml();
     default:
-      return proxyRequest(url, req);
+      return proxy(url, req);
   }
 }, { port });

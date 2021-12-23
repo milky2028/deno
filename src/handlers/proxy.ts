@@ -1,4 +1,4 @@
-export default function proxyRequest(url: URL, req: Request) {
+export default function proxy(url: URL, req: Request) {
   url.hostname = "jsonplaceholder.typicode.com";
   url.protocol = "https:";
   url.port = "443";
