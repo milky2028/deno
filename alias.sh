@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-alias serve="deno run --allow-net --allow-read src/server.ts"
+alias serve="DENO_DIR=.cache deno run --allow-net --allow-read src/server.ts"
 alias compile="echo 'Setting up build directory...' && \
                rm -rf build && \
                mkdir build && \
@@ -9,5 +9,5 @@ alias compile="echo 'Setting up build directory...' && \
                echo 'Linting...' && \
                deno lint && \
                echo 'Compiling...' && \
-               deno compile --output ./build/server --allow-net --allow-read ./src/server.ts"
+               DENO_DIR=.cache deno compile --output ./build/server --allow-net --allow-read ./src/server.ts"
 alias serve:prod="compile && ./build/server"
