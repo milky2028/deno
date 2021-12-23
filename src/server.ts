@@ -8,6 +8,7 @@ console.log(`Listening on port ${port}`);
 serve((req) => {
   const url = new URL(req.url);
   switch (url.pathname) {
+    case "/":
     case "/index.html":
       return serveHtml();
     default:
