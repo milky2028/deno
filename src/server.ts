@@ -11,6 +11,6 @@ serve((req) => {
     case "/index.html":
       return serveHtml();
     default:
-      return proxyRequest(req, url);
+      return proxyRequest(url, req);
   }
 }, { port });
