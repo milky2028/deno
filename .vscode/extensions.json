@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "visualstudioexptteam.vscodeintellicode",
+    "christian-kohler.path-intellisense",
+    "denoland.vscode-deno",
+    "eamodio.gitlens"
+  ]
+}
