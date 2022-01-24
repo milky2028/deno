@@ -9,9 +9,9 @@ alias build:prod="echo 'Setting up build directory...' && \
                   rm -rf build && \
                   mkdir build && \
                   echo 'Checking formatting...' && \
-                  deno fmt --ignore=./.cache --check && \
+                  deno fmt --check && \
                   echo 'Linting...' && \
-                  deno lint --ignore=./.cache && \
+                  deno lint && \
                   echo 'Testing...' && \
                   test && \
                   echo 'Compiling...' && \

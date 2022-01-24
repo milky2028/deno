@@ -1,0 +1,17 @@
+{
+  "$schema": "https://cdn.deno.land/deno/versions/v1.18.0/raw/cli/schemas/config-file.v1.json",
+  "fmt": {
+    "files": {
+      "include": [
+        "src/**/*"
+      ]
+    }
+  },
+  "lint": {
+    "files": {
+      "include": [
+        "src"
+      ]
+    }
+  }
+}
